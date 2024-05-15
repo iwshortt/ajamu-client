@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="js/scripts.js" defer></script>
+        <title>Portfolio | Ajamu Photography</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header section start -->
+            <header>
+                <div class="logo">
+                    <a href="index.html"><span class="logo-link">Ajamu Myrie</span></a>
+                    <span class="logo-text">Chicago | Nyc | Jamaica | Destinations</span>
+                </div>
+                <button class="nav-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                        <title>minus</title>
+                        <g fill="#212121" class="nc-icon-wrapper">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 3.5L17.75 3.5"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M3.25 9L17.75 9"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 14.5L17.75 14.5"></path>
+                        </g>
+                    </svg>
+                </button>
+                <nav class="header-nav-cont" data-visible="false"> <!-- 'data-visible' used to manipulate the javascript and css to show/hide nav on click -->
+                    <div class="menu-header">
+                        <span class="menu-logo">Ajamu Myrie</span>
+                        <span class="menu-text">Grace | Elegance | Style</span>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="nav-top-li">
+                            <a href="index.html">Home</a> <!-- refator css to remove margin without this class added -->
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="active-page" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-middle-li"> <!-- refator css to add margin without this class added -->
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-bottom-li"> <!-- refator css to remove bottom border without this class added -->
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="menu-contact">
+                        <a class="menu-btn" href="contact.html">
+                            <div class="btn-text-cont">
+                                <p>Get In Touch</p>
+                            </div>
+                        </a>
+                        <a class="instagram-logo" href="https://www.instagram.com/ajamuphoto/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 256 256">
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                                    <path d="M 62.263 90 H 27.738 C 12.443 90 0 77.557 0 62.263 V 27.738 C 0 12.443 12.443 0 27.738 0 h 34.525 C 77.557 0 90 12.443 90 27.738 v 34.525 C 90 77.557 77.557 90 62.263 90 z M 27.738 7 C 16.303 7 7 16.303 7 27.738 v 34.525 C 7 73.697 16.303 83 27.738 83 h 34.525 C 73.697 83 83 73.697 83 62.263 V 27.738 C 83 16.303 73.697 7 62.263 7 H 27.738 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path d="M 45.255 70.47 c -13.904 0 -25.215 -11.312 -25.215 -25.215 S 31.352 20.04 45.255 20.04 s 25.215 11.312 25.215 25.215 S 59.159 70.47 45.255 70.47 z M 45.255 27.04 c -10.044 0 -18.215 8.171 -18.215 18.215 c 0 10.044 8.171 18.215 18.215 18.215 c 10.044 0 18.215 -8.171 18.215 -18.215 C 63.471 35.211 55.3 27.04 45.255 27.04 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <circle cx="70.557" cy="19.936999999999998" r="4.897" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <!-- header section end -->
+            <!-- main section start -->
+            <main>
+                <!-- hero section start -->
+                <section class="hero">
+                    <div class="hero-img hero-animation">
+                        <div class="hero-text-cont">
+                            <span class="hero-text">Scroll To See More</span>
+                            <span class="hero-arrow">></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- hero section end -->
+                <!-- portfolio featuredsection start -->
+                <section class="portfolio-featured">
+                    <div class="portfolio-selections-cont">
+                        <div class="portfolio-selections">
+                            <div class="portfolio-selection portfolio-weddings active">Weddings</div>
+                            <div class="portfolio-selection portfolio-engagements">Engagements</div>
+                        </div>
+                    </div>
+                    <div class="featured-cont portfolio-feat-cont hidden slide-right">
+                        <div class="featured-highlight hidden">
+                            <a href="client-pages/example.html" target="_blank"><div class="featured-highlight-img featured-img-1"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="unlocked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock open white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M7.25,8.25v-3.25c0-1.795-1.455-3.25-3.25-3.25h0c-1.795,0-3.25,1.455-3.25,3.25v1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9.5 11.75L9.5 12.75"></path>
+                                            <rect x="3.75" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="client-pages/example.html" target="_blank">
+                                    <h3 class="featured-highlight-title">Tuscany Romance Siena, Italy</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Stephanie + Jon</p>
+                        </div>
+                        <div class="featured-highlight staggered-slide hidden slide-right">
+                            <a href="php/login.php" target="_blank"><div class="featured-highlight-img featured-img-2"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="locked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                            <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="php/login.php" target="_blank">
+                                    <h3 class="featured-highlight-title">Chic Private Wedding Club</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Alex + James</p>
+                        </div>
+                        <div class="featured-highlight staggered-slide hidden slide-right">
+                            <a href="php/login.php" target="_blank"><div class="featured-highlight-img featured-img-3"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="locked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                            <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="php/login.php" target="_blank">
+                                    <h3 class="featured-highlight-title">Riverbend Kohler, WI Wedding</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Emily + Mike</p>
+                        </div>
+                        <div class="featured-highlight staggered-slide hidden slide-right">
+                            <a href="php/login.php" target="_blank"><div class="featured-highlight-img featured-img-4"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="locked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                            <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="php/login.php" target="_blank">
+                                    <h3 class="featured-highlight-title">Elegant Mexico Wedding</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Kindal + Mike</p>
+                        </div>
+                        <div class="featured-highlight staggered-slide hidden slide-right">
+                            <a href="php/login.php" target="_blank"><div class="featured-highlight-img featured-img-5"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="locked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                            <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="php/login.php" target="_blank">
+                                    <h3 class="featured-highlight-title">Luxury chicago Wedding At The University Club</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Elizabeth + James</p>
+                        </div>
+                        <div class="featured-highlight staggered-slide hidden slide-right">
+                            <a href="php/login.php" target="_blank"><div class="featured-highlight-img featured-img-6"></div></a>
+                            <div class="featured-highlight-title-cont">
+                                <div class="locked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                        <title>lock white</title>
+                                        <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                            <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                            <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <a href="php/login.php" target="_blank">
+                                    <h3 class="featured-highlight-title">Romantic Country Club Wedding</h3>
+                                </a>
+                            </div>
+                            <p class="featured-highlight-text">Reggie + Xavier</p>
+                        </div>
+                    </div>
+                    <button id="view-more" class="view-more-btn">View More</button>
+                </section>
+                <!-- portfolio featured section end -->
+                <!-- testimonial divider section ***NOTE*** find semantic equivalent for section-->
+                <section class="portfolio-testimonial-divider-1">
+                    <div class="portfolio-testimonial-text-cont hidden slide-down">
+                        <div class="portfolio-testimonial-quotemark">"</div>
+                        <p class="portfolio-testimonial-1">Our engagement and wedding photoshoots were made even more special thanks to Ajamu and his team.</p>
+                        <p class="portfolio-testimonial-author">- Martha Makowski</p>
+                    </div>
+                </section>
+                <!-- testimonial divider section end -->
+                <!-- unique and special section start -->
+                <section class="unique-special">
+                    <div class="unique-special-text-cont hidden slide-down">
+                        <p class="unique-special-subheading">Favorites</p>
+                        <h2>Unique & Special</h2>
+                        <p class="unique-special-text-main">Interested in booking us for your 2024 event? We are currently accepting a limited number of commissions. Get in touch with us and we can grab some coffee or wine to see if we are the perfect fit for your special day!</p>
+                    </div>
+                    <div class="unique-portfolio-carousel-btn-cont-1 hidden slide-left">
+                        <div class="unique-portfolio-carousel-cont">
+                            <div class="unique-portfolio-highlights-img">
+                                <ul id="carousel-track" class="unique-portfolio-carousel-track">
+                                    <li class="unique-portfolio-carousel-slide current-slide">
+                                        <div class="unique-portfolio-highlights-carousel-img unique-portfolio-img-1"></div>
+                                    </li>
+                                    <li class="unique-portfolio-carousel-slide">
+                                        <div class="unique-portfolio-highlights-carousel-img unique-portfolio-img-2"></div>
+                                    </li>
+                                    <li class="unique-portfolio-carousel-slide">
+                                        <div class="unique-portfolio-highlights-carousel-img unique-portfolio-img-3"></div>
+                                    </li>
+                                    <li class="unique-portfolio-carousel-slide">
+                                        <div class="unique-portfolio-highlights-carousel-img unique-portfolio-img-4"></div>
+                                    </li>
+                                    <li class="unique-portfolio-carousel-slide">
+                                        <div class="unique-portfolio-highlights-carousel-img unique-portfolio-img-5"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="portfolio-carousel-nav unique-carousel-dots">
+                            <button class="carousel-indicator current-slide"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                        </div>
+                        <div class="unique-portfolio-carousel-btn-cont hidden">
+                            <button id="carousel-btn-left" class="unique-portfolio-carousel-btn unique-carousel-btn-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18" style="transform: rotate(-90deg)">
+                                    <title>chevron up</title>
+                                    <g fill="#212121" class="nc-icon-wrapper">
+                                        <polyline points="2.75 11.5 9 5.25 15.25 11.5" fill="none" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></polyline>
+                                    </g>
+                                </svg>
+                            </button> <!-- update all 'text' links to 'svg' elements or img -->
+                            <button id="carousel-btn-right" class="unique-portfolio-carousel-btn unique-carousel-btn-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18" style="transform: rotate(90deg)">
+                                    <title>chevron up</title>
+                                    <g fill="#212121" class="nc-icon-wrapper">
+                                        <polyline points="2.75 11.5 9 5.25 15.25 11.5" fill="none" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></polyline>
+                                    </g>
+                                </svg>
+                            </button>  <!-- update all 'text' links to 'svg' elements or img -->
+                        </div>
+                    </div>
+                    <a class="unique-special-btn" href="contact.html">
+                        <div class="about-main-btn-text-cont">
+                            <p>Schedule an Event</p>
+                        </div>
+                    </a>
+                </section>
+                <!-- unique and special section end -->
+                <!-- call to action section start -->
+                <section class="call-to-action">
+                    <div class="call-to-action-cont">
+                        <div class="call-to-action-img action-img-1 hidden slide-right"></div>
+                        <div class="cta-text-cont hidden">
+                            <h2>Ready to create some incredible wedding photos?</h2>
+                            <p class="call-to-action-text-main">If you love what you feel here and want images and moments captured like the ones you see here, then let’s grab a coffee. I want to learn more about your wedding and how photography fits into your wedding day.</p>
+                            <a class="call-to-action-btn" href="contact.html">
+                                <div class="btn-text-cont">
+                                    <p>Let's Work Together</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="call-to-action-img action-img-2 hidden slide-right"></div>
+                    </div>
+                </section>
+                <!-- call to action section end -->
+                <!-- contact section start -->
+                <section class="contact">
+                    <div class="contact-text hidden slide-down">
+                        <h2>Ajamu Myrie Photagrapher</h2>
+                        <p class="contact-text-main">Wedding photographer and storyteller Follow me on instagram <span class="social-handle">@ajamuphotos</span></p>
+                    </div>
+                    <div class="contact-cont hidden slide-down">
+                        <div class="instagram-preview-cont">
+                            <div class="instagram-preview preview-1 hidden slide-right"></div>
+                            <div class="instagram-preview preview-2 hidden slide-right"></div>
+                            <div class="instagram-preview preview-3 hidden slide-right"></div>
+                            <div class="instagram-preview preview-4 hidden slide-right"></div>
+                            <div class="instagram-preview preview-1 hidden slide-right"></div>
+                            <div class="instagram-preview preview-2 hidden slide-right"></div>
+                            <div class="instagram-preview preview-3 hidden slide-right"></div>
+                            <div class="instagram-preview preview-4 hidden slide-right"></div>
+                            <div class="instagram-preview preview-1 hidden slide-right"></div>
+                            <div class="instagram-preview preview-2 hidden slide-right"></div>
+                            <div class="instagram-preview preview-3 hidden slide-right"></div>
+                            <div class="instagram-preview preview-4 hidden slide-right"></div>
+                            <div class="instagram-preview preview-1 hidden slide-right"></div>
+                            <div class="instagram-preview preview-2 hidden slide-right"></div>
+                            <div class="instagram-preview preview-3 hidden slide-right"></div>
+                            <div class="instagram-preview preview-4 hidden slide-right"></div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-cont hidden">
+                        <a class="instagram-logo" href="https://www.instagram.com/ajamuphoto/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 256 256">
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                                    <path d="M 62.263 90 H 27.738 C 12.443 90 0 77.557 0 62.263 V 27.738 C 0 12.443 12.443 0 27.738 0 h 34.525 C 77.557 0 90 12.443 90 27.738 v 34.525 C 90 77.557 77.557 90 62.263 90 z M 27.738 7 C 16.303 7 7 16.303 7 27.738 v 34.525 C 7 73.697 16.303 83 27.738 83 h 34.525 C 73.697 83 83 73.697 83 62.263 V 27.738 C 83 16.303 73.697 7 62.263 7 H 27.738 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path d="M 45.255 70.47 c -13.904 0 -25.215 -11.312 -25.215 -25.215 S 31.352 20.04 45.255 20.04 s 25.215 11.312 25.215 25.215 S 59.159 70.47 45.255 70.47 z M 45.255 27.04 c -10.044 0 -18.215 8.171 -18.215 18.215 c 0 10.044 8.171 18.215 18.215 18.215 c 10.044 0 18.215 -8.171 18.215 -18.215 C 63.471 35.211 55.3 27.04 45.255 27.04 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <circle cx="70.557" cy="19.936999999999998" r="4.897" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                                </g>
+                            </svg>
+                        </a>
+                        <ul class="footer-nav">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- contact section end -->
+            </main>
+            <!-- main section end -->
+        </div>
+    </body>
+</html>

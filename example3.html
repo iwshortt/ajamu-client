@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/example.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- <script src="js/scripts.js" defer></script> -->
+        <script src="js/example.js" defer></script>
+        <title>Ajamu Photography</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header section start -->
+            <header>
+                <div class="logo">
+                    <a href="#"><span class="logo-link">Ajamu Myrie</span></a>
+                    <span class="logo-text">Chicago | Nyc | Jamaica | Destinations</span>
+                </div>
+                <button class="nav-toggle"><span>Menu</span></button>
+                <nav class="header-nav-cont" data-visible="false"> <!-- 'data-visible' used to manipulate the javascript and css to show/hide nav on click -->
+                    <div class="menu-header">
+                        <span class="menu-logo">Ajamu Myrie</span>
+                        <span class="menu-text">Grace | Elegance | Style</span>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="nav-top-li">
+                            <a href="#">Home</a> <!-- refator css to remove margin without this class added -->
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-middle-li"> <!-- refator css to add margin without this class added -->
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-bottom-li"> <!-- refator css to remove bottom border without this class added -->
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="menu-contact">
+                        <button class="menu-btn">Get In Touch</button>
+                        <span class="insta-logo"></span>
+                    </div>
+                </nav>
+            </header>
+            <!-- header section end -->
+            <!-- main section start -->
+            <main>
+                <!-- hero section start -->
+                <section class="client-hero-cont">
+                    <div class="client-hero-img client-img"></div>
+                    <div class="client-hero-content-cont">
+                        <h1 class="client-hero-text-header">Ajamu Photo Stories</h1>
+                        <button class="client-hero-btn"><a href="#client-gallery">View Gallery</a></button>
+                    </div>
+                </section>
+                <!-- hero section end -->
+                <!-- client gallery nav start -->
+                <section id="client-gallery" class="client-gallery-nav-cont">
+                    <div class="client-gallery-nav-controls">
+                        <div class="client-gallery-selections">
+                            <p class="client-gallery-selection selection-1 active">Toscana Mozzafiato</p>
+                            <p class="client-gallery-selection selection-2">Siena</p>
+                            <p class="client-gallery-selection selection-3">Borgo Arigiano</p>
+                            <p class="client-gallery-selection selection-4">The Wedding Day</p>
+                        </div>
+                        <div class="client-list-cont">
+                            <button class="client-toggle">More ></button>
+                            <ul class="client-gallery-nav hide-item">
+                                <div class="client-nav-list-item">
+                                    <li><a href="example.html">Client Example One</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                                <div class="client-nav-list-item">
+                                    <li><a href="example2.html">Client Example Two</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                                <div class="client-nav-list-item">
+                                    <li><a href="#">Client Example Three</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                                <div class="client-nav-list-item">
+                                    <li><a href="php/login.php">Client Example Four</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                                <div class="client-nav-list-item">
+                                    <li><a href="php/login.php">Client Example Five</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                                <div class="client-nav-list-item">
+                                    <li><a href="php/login.php">Client Example Six</a></li>
+                                    <span class="client-nav-locked"></span>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- client gallery nav end -->
+                <!-- client photo gallery start -->
+                <section class="client-photo-gallery-cont">
+                    <div class="client-photo-gallery client-photo-list-1">
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="1">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="2">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="3">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="4">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="5">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="6">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="7">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="8">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="9">
+                                <img src="img/test-wedding-portfolio-5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-photo-gallery client-photo-list-2 hide-item">
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="10">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="11">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="12">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="13">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="14">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="15">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="client-photo gallery-item" data-index="16">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="17">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                            <div class="client-photo gallery-item" data-index="18">
+                                <img src="img/test-wedding-portfolio-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- client photo gallery end -->
+            </main>
+            <!-- main section end -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/example.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- <script src="js/scripts.js" defer></script> -->
+        <script src="../js/example.js" defer></script>
+        <title>Ajamu Photography</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header section start -->
+            <header>
+                <div class="logo">
+                    <a href="../index.html"><span class="logo-link">Ajamu Myrie</span></a>
+                    <span class="logo-text">Chicago | Nyc | Jamaica | Destinations</span>
+                </div>
+                <button class="nav-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                        <title>minus</title>
+                        <g fill="#212121" class="nc-icon-wrapper">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 3.5L17.75 3.5"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M3.25 9L17.75 9"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 14.5L17.75 14.5"></path>
+                        </g>
+                    </svg>
+                </button>
+                <nav class="header-nav-cont" data-visible="false"> <!-- 'data-visible' used to manipulate the javascript and css to show/hide nav on click -->
+                    <div class="menu-header">
+                        <span class="menu-logo">Ajamu Myrie</span>
+                        <span class="menu-text">Grace | Elegance | Style</span>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="nav-top-li">
+                            <a href="../index.html">Home</a> <!-- refator css to remove margin without this class added -->
+                        </li>
+                        <li>
+                            <a href="../about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="../portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-middle-li"> <!-- refator css to add margin without this class added -->
+                            <a href="../gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-bottom-li"> <!-- refator css to remove bottom border without this class added -->
+                            <a href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="menu-contact">
+                        <a class="menu-btn" href="contact.html">
+                            <div class="btn-text-cont">
+                                <p>Get In Touch</p>
+                            </div>
+                        </a>
+                        <a class="instagram-logo" href="https://www.instagram.com/ajamuphoto/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 256 256">
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                                    <path d="M 62.263 90 H 27.738 C 12.443 90 0 77.557 0 62.263 V 27.738 C 0 12.443 12.443 0 27.738 0 h 34.525 C 77.557 0 90 12.443 90 27.738 v 34.525 C 90 77.557 77.557 90 62.263 90 z M 27.738 7 C 16.303 7 7 16.303 7 27.738 v 34.525 C 7 73.697 16.303 83 27.738 83 h 34.525 C 73.697 83 83 73.697 83 62.263 V 27.738 C 83 16.303 73.697 7 62.263 7 H 27.738 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path d="M 45.255 70.47 c -13.904 0 -25.215 -11.312 -25.215 -25.215 S 31.352 20.04 45.255 20.04 s 25.215 11.312 25.215 25.215 S 59.159 70.47 45.255 70.47 z M 45.255 27.04 c -10.044 0 -18.215 8.171 -18.215 18.215 c 0 10.044 8.171 18.215 18.215 18.215 c 10.044 0 18.215 -8.171 18.215 -18.215 C 63.471 35.211 55.3 27.04 45.255 27.04 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <circle cx="70.557" cy="19.936999999999998" r="4.897" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <!-- header section end -->
+            <!-- main section start -->
+            <main>
+                <!-- hero section start -->
+                <section class="client-hero-cont">
+                    <div class="client-hero-img client-img">
+                        <div class="client-hero-info-cont">
+                            <h1 class="client-hero-text-header">Reid + Mershimer <span>Wedding</span></h1>
+                            <p class="client-hero-text client-text-couple">Stephanie + Jon</p>
+                            <p class="client-hero-text client-text-location">Tuscany, Italy</p>
+                            <p class="client-hero-text client-text-venue">Borgo Agiano Winery</p>
+                        </div>
+                        <div class="client-hero-content-cont">
+                            <a class="client-hero-btn" href="#client-gallery">
+                                <div class="btn-text-cont">
+                                    <p>View Gallery</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- hero section end -->
+                <section class="client-intro">
+                    <div class="client-intro-cont">
+                        <div class="client-intro-text-cont">
+                            <h1 class="client-intro-text-header">Toscana Mozzafiato...</h1>
+                            <p class="client-intro-text-main">Tuscany has a feeling unlike any other region in the world. The smell, the sun, the wind...it all feels different. Somehow warmer than we’re used to...</p>
+                            <p class="client-intro-text-secondary">It was an incredible experience to follow Stephanie and Jon to Italy and document their wedding weekend!</p>
+                        </div>
+                        <img class="client-intro-img" src="../img/test-wedding-portfolio.jpg" alt="">
+                    </div>
+                    <aside class="client-testemonial-cont">
+                        <div class="client-testemonial-img-cont testemonial-img-cont-1">
+                            <img class="testemonial-img testemonial-img-1" src="../img/test-wedding-portfolio-3.jpg" alt="">
+                            <img class="testemonial-img testemonial-img-2" src="../img/test-bride-groom.jpg" alt="">
+                        </div>
+                        <div class="client-testemonial-img-cont testemonial-img-cont-2">
+                            <img class="testemonial-img testemonial-img-3" src="../img/test-wedding-portfolio-11.jpg" alt="">
+                            <img class="testemonial-img testemonial-img-4" src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-testemonial">
+                            <p class="client-testemonial-text">“Ajamu’s work is absolute gold. From details, to genuine moments, nothing is ever missed. From quite moments between the brinde and her parents to the parry at the end of the night. He seems to be everywhere, all the time without being intrusive. Our couple loved working wit him and so did we!”</p>
+                            <p class="client-testemonial-author">-Italy events Lead Planner</p>
+                        </div>
+                    </aside>
+                </section>
+                <!-- client text section start -->
+                <section id="client-gallery">
+                    <div class="client-gallery-text-cont">
+                        <h2 class="client-gallery-text-header">Gallery</h2>
+                        <p class="client-gallery-text-subheading">-Siena-</p>
+                        <p class="client-gallery-text-main">Siena, a city in central Itay’s Tuscany region, is distinguished by its medieval brick buildings. The fan-shaped central square, Piazza del Campo, is the site of the Palazzo Pubblico, the Gothic town hall, and the Torre del Mangia, a slender 14th-century tower with sweeping views from its distinctive white crown. The city’s 17 historic “contrade” (districts) extend outward from the plaza.</p>
+                        <p class="client-gallery-text-secondary">Seina, was an absolute joy to explore for a few hours!</p>
+                    </div>
+                </section>
+                <!-- client text section end -->
+                <!-- client gallery nav start -->
+                <section class="client-gallery-nav-cont">
+                    <div class="client-gallery-nav-controls">
+                        <div class="client-gallery-selections">
+                            <p class="client-gallery-selection selection-1 active">Toscana Mozzafiato</p>
+                            <p class="client-gallery-selection selection-2">Siena</p>
+                            <p class="client-gallery-selection selection-3">Borgo Arigiano</p>
+                            <p class="client-gallery-selection selection-4">The Wedding Day</p>
+                        </div>
+                        <div class="client-list-cont">
+                            <div class="select-field">
+                                <button class="client-toggle">More</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" style="transform: rotate(90deg)">
+                                    <title>chevron up small</title>
+                                    <g fill="#212121" class="nc-icon-wrapper">
+                                        <path fill="none" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.84 7.69l4.19-4.18 4.18 4.18"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <ul class="client-gallery-nav hide-item">
+                                <a href="#">
+                                    <div class="client-nav-list-item">
+                                        <li>Tuscany Romance Siena, Italy</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock open white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M7.25,8.25v-3.25c0-1.795-1.455-3.25-3.25-3.25h0c-1.795,0-3.25,1.455-3.25,3.25v1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9.5 11.75L9.5 12.75"></path>
+                                                <rect x="3.75" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="../example2.html">
+                                    <div class="client-nav-list-item">
+                                        <li>Chic Private Wedding Club</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock open white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M7.25,8.25v-3.25c0-1.795-1.455-3.25-3.25-3.25h0c-1.795,0-3.25,1.455-3.25,3.25v1.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9.5 11.75L9.5 12.75"></path>
+                                                <rect x="3.75" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="../php/login.php">
+                                    <div class="client-nav-list-item">
+                                        <li>Riverbend Kohler, WI Wedding</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                                <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="../php/login.php">
+                                    <div class="client-nav-list-item">
+                                        <li>Elegant Mexico Wedding</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                                <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="../php/login.php">
+                                    <div class="client-nav-list-item">
+                                        <li>Luxury Chicago Wedding</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                                <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="../php/login.php">
+                                    <div class="client-nav-list-item">
+                                        <li>Romantic Country Club Wedding</li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                                            <title>lock white</title>
+                                            <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+                                                <path d="M5.75,8.25v-3.25c0-1.795,1.455-3.25,3.25-3.25h0c1.795,0,3.25,1.455,3.25,3.25v3.25" stroke-linecap="round" stroke-linejoin="round" stroke="#212121"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M9 11.75L9 12.75"></path>
+                                                <rect x="3.25" y="8.25" width="11.5" height="8" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- client gallery nav end -->
+                <!-- client photo gallery start -->
+                <section id="client-photo-list-1" class="client-photo-gallery">
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="1">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="2">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="3">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="1">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="2">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="3">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="4">
+                            <img src="../img/test-bride-groom.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="5">
+                            <img src="../img/test-wedding-portfolio-11.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="6">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="4">
+                            <img src="../img/test-bride-groom.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="5">
+                            <img src="../img/test-wedding-portfolio-11.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="6">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="7">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="8">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="9">
+                            <img src="../img/test-wedding-featured.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="7">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="8">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="9">
+                            <img src="../img/test-wedding-featured.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="1">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="2">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="3">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="1">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="2">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="3">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="4">
+                            <img src="../img/test-bride-groom.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="5">
+                            <img src="../img/test-wedding-portfolio-11.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="6">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="4">
+                            <img src="../img/test-bride-groom.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="5">
+                            <img src="../img/test-wedding-portfolio-11.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="6">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="7">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="8">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="9">
+                            <img src="../img/test-wedding-featured.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="7">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="8">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="9">
+                            <img src="../img/test-wedding-featured.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <section id="client-photo-list-2" class="client-photo-gallery hide-item">
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="10">
+                            <img src="../img/test-wedding-portfolio-9.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="11">
+                            <img src="../img/test-wedding-portfolio-8.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="12">
+                            <img src="../img/test-wedding-portfolio-5.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="10">
+                            <img src="../img/test-wedding-portfolio-9.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="11">
+                            <img src="../img/test-wedding-portfolio-8.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="12">
+                            <img src="../img/test-wedding-portfolio-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="13">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="14">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="15">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="13">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="14">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="15">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="16">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="17">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="18">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="16">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="17">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="18">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="10">
+                            <img src="../img/test-wedding-portfolio-9.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="11">
+                            <img src="../img/test-wedding-portfolio-8.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="12">
+                            <img src="../img/test-wedding-portfolio-5.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="10">
+                            <img src="../img/test-wedding-portfolio-9.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="11">
+                            <img src="../img/test-wedding-portfolio-8.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="12">
+                            <img src="../img/test-wedding-portfolio-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="13">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="14">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="15">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="13">
+                            <img src="../img/test-wedding-portfolio-4.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="14">
+                            <img src="../img/test-wedding-portfolio-10.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="15">
+                            <img src="../img/test-wedding-portfolio.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="client-photo gallery-item" data-index="16">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="17">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="18">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="16">
+                            <img src="../img/test-wedding-portfolio-2.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="17">
+                            <img src="../img/test-wedding-portfolio-3.jpg" alt="">
+                        </div>
+                        <div class="client-photo gallery-item" data-index="18">
+                            <img src="../img/test-wedding-portfolio-7.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- client photo gallery end -->
+            </main>
+            <!-- main section end -->
+        </div>
+    </body>
+</html>

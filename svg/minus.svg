@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+    <title>minus</title>
+    <g fill="#212121" class="nc-icon-wrapper">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 3.5L17.75 3.5"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M3.25 9L17.75 9"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill="none" stroke="#212121" class="nc-icon-wrapper" d="M-3.25 14.5L17.75 14.5"></path>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+    <title>xmark</title>
+    <g class="nc-icon-wrapper" fill="none" stroke="#212121" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke="#212121" d="M14 4L4 14"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4L14 14"></path>
+    </g>
+</svg>

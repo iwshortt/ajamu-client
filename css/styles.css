@@ -1,0 +1,2535 @@
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- global ------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fcfbf7;
+    color: #36322B;
+    letter-spacing: 0.08em;
+    overflow-x: hidden; /* prevent the overflow of the nav when it is hidden ***NOTE*** may be unnecessary */
+}
+.wrapper {
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    line-height: 1.5em;
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------------- fonts ------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+/* font-family: "Raleway", sans-serif;
+font-family: "Playfair Display SC", serif;
+font-family: "Playfair Display", serif; */
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- header ------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* header */
+header {
+    background-color: #fcfbf7;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 8; /* index is just below the button in value to allow button to be visible */
+}
+
+/* logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+.logo-link {
+    font-size: 24px;
+    font-family: "Playfair Display SC", serif;
+}
+.logo-text {
+    font-size: 8px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+}
+.nav-toggle {
+    background: transparent;
+    border: none;
+    z-index: 10;
+}
+
+/* nav */
+.header-nav-cont {
+    display: none; /* header nav doesnt display screen width 820px-1023px ***FIX*** */
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 0%;
+    background-color: #fcfbf7;
+    padding: 106px 40px;
+    transform: translateX(100%);
+    transition: transform 750ms ease-in-out;
+    z-index: 9; /* index is just below the button in value to allow button to be visible */
+}
+.header-nav-cont[data-visible='true'] {
+    transform: translateX(0%);
+}
+.menu-header {
+    display: none;
+    flex-direction: column;
+}
+.menu-logo {
+    font-size: 48px;
+    font-family: "Playfair Display SC", serif;
+}
+.menu-text {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+}
+.header-nav a {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+}
+.header-nav a:hover {
+    font-weight: 700;
+}
+.header-nav a.active-page {
+    font-weight: 700;
+}
+.menu-contact {
+    display: none;
+}
+@media (max-width: 1023px) {
+    .header-nav-cont {
+        /* displays the nav */
+        display: flex;
+    }
+    .menu-header {
+        display: flex;
+        margin-bottom: 80px;
+    }
+    nav ul {
+        margin-bottom: 40px;
+    }
+    nav li {
+        margin-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid black;
+    }
+    .nav-top-li {
+        margin-top: 0;
+    }
+    .nav-middle-li {
+        margin-bottom: 80px;
+    }
+    .nav-bottom-li {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .menu-contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-btn {
+        display: flex;
+        width: 208px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-family: "Playfair Display", serif;
+        background-color: #DCE4F2;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 
+                    0 6px 6px rgba(0, 0, 0, 0.23), 
+                    inset 0 -3px #DCE4F2;
+        padding: 24px;
+    }
+}
+@media (min-width: 768px) {
+    /* header nav
+    --------------------------- */
+    .header-nav-cont {
+        inset: 0 0 0 50%;
+    }
+}
+@media (min-width: 1024px) {
+    /* header
+    --------------------------- */
+    header {
+        padding: 26px;
+    }
+    /* header menu
+    --------------------------- */
+    .nav-toggle {
+        display: none;
+    }
+    /* header nav
+    --------------------------- */
+    .header-nav-cont {
+        padding: 0;
+        background-color: revert;
+        inset: revert;
+        position: revert; /* may break the code perhaps 'unset' is best used */
+        display: revert; /* may break the code perhaps 'unset' is best used */
+        transform: revert;
+    }
+    .header-nav {
+        display: flex;
+        gap: 24px;
+    }
+    .header-nav a {
+        font-weight: 500;
+    }
+    .header-nav a:hover {
+        border-bottom: 1px solid black;
+    }
+    .header-nav a.active-page {
+        font-weight: 700;
+        border-bottom: 1px solid black;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------------- hero -------------------------------- */
+/* ----------------------------------------------------------------------- */
+.hero {
+    position: relative;
+    z-index: 9;
+    padding: 8px;
+}
+.hero-img {
+    width: 100%;
+    height: 98vh;
+    /* background: 
+        linear-gradient(rgb(104 98 98 / 50%),rgb(0 0 0 / 50%)),
+        url('../img/test-bride-groom-2.jpg'); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease-in-out;
+    border: 6px solid #d8d5ce;
+}
+.hero-animation {
+    animation-name: heroAnimation;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+@keyframes heroAnimation {
+    0% {
+        background-image: url("../img/test-bride-groom.jpg");
+    }
+    20% {
+        background-image: url("../img/test-bride-groom-2.jpg");
+    }
+    40% {
+        background-image: url("../img/test-bride-groom-3.jpg");
+    }
+    60% {
+        background-image: url("../img/test-bride-groom-4.jpg");
+    }
+    80% {
+        background-image: url("../img/test-bride-groom-5.jpg");
+    }
+   100% {
+        background-image: url("../img/test-bride-groom-6.jpg");
+    }
+}
+.hero-text-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    /* padding: 16px; */
+    width: fit-content;
+    margin: auto auto 24px;
+    /* background: hsl(0 0% 14% / 15%); */
+    border-radius: 12px;
+}
+.hero-text {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    color: #E6DFD2;
+}
+.hero-arrow {
+    display: none;
+    color: #E6DFD2;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* hero section
+    --------------------------- */
+}
+@media (min-width: 1024px) {
+    /* hero section
+    --------------------------- */
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------------- about ------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* about into section */
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.about-intro-img {
+    display: none;
+    background: url('../img/test-wedding-inquire.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 352px;
+    height: 544px;
+    border-radius: 8px;
+}
+.about-intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 328px;
+    margin: 120px auto;
+}
+.about-intro h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Playfair Display SC", serif;
+}
+.about-intro-text-heading {
+    font-size: 48px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 752px;
+}
+.about-intro-text-subheading {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+.about-intro-text-main {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.about-intro-divider {
+    width: 120px;
+    border-bottom: 1px solid black;
+}
+/* about main section */
+.about-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.about-main-img {
+    width: 328px;
+    height: 504px;
+    margin: 0 auto;
+    background: url(../img/test-bride-groom-6.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+.about-main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 328px;
+    margin: 56px auto 120px;
+}
+.about-main h2 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+.about-main-text-subheading {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+.about-main-text-main {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.about-main-text-quote {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.about-main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 72px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    background-color: transparent;
+    /* box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #DCE4F2; */
+    /* padding: 24px; */
+}
+/* .about-main-btn:hover {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #b4bfd4;
+} */
+/* .about-main-btn:active {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: none;
+} */
+.about-main-btn-text-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* about intro
+    --------------------------- */
+    .about-intro-text {
+        width: 712px;
+    }
+    .about-intro-text-heading {
+        font-size: 64px;
+    }
+    /* about main
+    --------------------------- */
+    .about-main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        margin: 0 auto 120px;
+    }
+    .about-main-img {
+        width: 352px;
+        height: 544px;
+        margin: 0;
+    }
+    .about-main-text {
+        margin: 0;
+        gap: 24px;
+    }
+}
+/* media queries
+--------------------------- */
+@media (min-width: 1024px) {
+    /* about intro
+    --------------------------- */
+    .about-intro {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 48px;
+        flex-flow: row-reverse;
+        margin: 120px auto;
+    }
+    /* .about-intro-img {
+        display: revert; may break the code perhaps 'unset' is best used
+        width: 448px;
+        height: 640px;
+    } */
+    .about-intro-text {
+        gap: 32px;
+        margin: 16px 0;
+        width: 816px;
+    }
+    /* about main
+    --------------------------- */
+    .about-main-img {
+        width: 448px;
+        height: 640px;
+    }
+    .about-main-text {
+        width: 424px;
+        gap: 32px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ bg dividers ---------------------------- */
+/* ----------------------------------------------------------------------- */
+.background-divider-1 {
+    width: 100%;
+    height: 596px;
+    background: 
+        linear-gradient(rgb(104 98 98 / 50%),rgb(0 0 0 / 50%)),
+        url('../img/test-wedding-featured-2.jpg')
+        fixed;
+    background-position: center;
+}
+.background-divider-2 {
+    width: 100%;
+    height: 596px;
+    background: 
+        linear-gradient(rgb(104 98 98 / 50%),rgb(0 0 0 / 50%)),
+        url('../img/test-wedding-featured-3.jpg')
+        fixed;
+    background-position: center;
+}
+.background-divider-3 {
+    width: 100%;
+    height: 596px;
+    background: 
+        linear-gradient(rgb(104 98 98 / 50%),rgb(0 0 0 / 50%)),
+        url('../img/test-wedding-portfolio-8.jpg')
+        fixed;
+    background-position: center;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- featured ----------------------------- */
+/* ----------------------------------------------------------------------- */
+/* featured intro */
+.featured-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    width: 328px;
+    margin: 0 auto 64px;
+}
+.featured-intro h2 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+.featured-intro-subheading {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+}
+.featured-intro-text {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.featured-intro-img {
+    width: 328px;
+    height: 504px;
+    background: url('../img/test-wedding-inquire.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+/* featured highlights */
+.featured {
+    margin: 120px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1275px;
+}
+.featured-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.featured-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    display: none;
+}
+.featured-highlight:nth-child(1),
+.featured-highlight:nth-child(2),
+.featured-highlight:nth-child(3) {
+    display: flex;
+}
+.featured-highlight-title {
+    font-size: 20px;
+    max-width: 300px;
+    font-family: "Playfair Display SC", serif;
+}
+.featured-highlight-title:hover {
+    opacity: .8;
+}
+.featured-highlight-text {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+.featured-highlight-img {
+    width: 328px;
+    height: 504px;
+    border-radius: 8px;
+}
+
+.featured-highlight-img:hover {
+    opacity: .8;
+}
+.featured-img-1 {
+    background: url('../img/test-bride-groom.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.featured-img-2 {
+    background: url('../img/test-bride-groom-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.featured-img-3 {
+    background: url('../img/test-bride-groom-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.featured-img-4 {
+    background: url('../img/test-bride-groom-4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.featured-img-5 {
+    background: url('../img/test-bride-groom-5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.featured-img-6 {
+    background: url('../img/test-bride-groom-6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.view-more-btn {
+    width: 224px;
+    height: 72px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    background-color: transparent;
+    margin-top: 72px;
+}
+.view-more-btn:hover {
+    cursor: pointer;
+}
+/* .view-more-btn:active {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: none;
+} */
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* featured section
+    --------------------------- */
+    .featured {
+        width: 100%;
+        overflow: hidden;
+        padding: 32px;
+    }
+    /* featured intro
+    --------------------------- */
+    .featured-intro {
+        width: 616px;
+    }
+    .featured-intro-img {
+        display: none;
+    }
+    /* featured highlight container
+    --------------------------- */
+    .featured-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        width: 100%;
+        gap: 40px;
+    }
+    /* featured client highlight
+    --------------------------- */
+    .featured-highlight:nth-child(4) {
+        display: flex;
+    }
+}
+@media (min-width: 1024px) {
+    /* featured intro
+    --------------------------- */
+    .featured-intro {
+        margin: 0 0 64px;
+        width: 648px;
+    }
+    .featured-highlight-img {
+        width: 280px;
+        height: 456px;
+    }
+    /* featured client highlight
+    --------------------------- */
+    .featured-highlight:nth-child(4) {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    /* featured client highlight
+    --------------------------- */
+    .featured-highlight:nth-child(4) {
+        display: flex;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- portfolio ----------------------------- */
+/* ----------------------------------------------------------------------- */
+.portfolio {
+    margin: 120px auto;
+}
+.portfolio-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 56px;
+    /* overflow: hidden; */
+}
+.portfolio-highlights-heading-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.portfolio-highlights-text-subheading {
+    display: none;
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.portfolio-highlights h2 {
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+}
+.portfolio-highlights-text {
+    font-size: 18px;
+    width: 350px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.portfolio-highlights-btn {
+    display: flex;
+    width: 224px;
+    height: 72px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    background-color: transparent;
+    padding: 24px;
+}
+.portfolio-highlights-btn:hover {
+    cursor: pointer;
+}
+/* .portfolio-highlights-btn:active {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: none;
+} */
+.btn-text-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.portfolio-highlights-img { /* carousel track container */
+    width: 100%;
+    max-width: 392px;
+    margin: 0 auto;
+    height: 272px;
+    position: relative;
+}
+.portfolio-carousel-track {
+    position: relative;
+    transition: transform 750ms ease-in-out;
+}
+/* portfolio carousel
+--------------------------- */
+.portfolio-carousel-cont {
+    width: 100%;
+    height: 272px;
+    margin: 0 auto;
+    position: relative;
+}
+/* portfolio carousel images
+--------------------------- */
+.portfolio-highlights-carousel-img {
+    width: 100%;
+    border-radius: 8px;
+}
+.portfolio-img-1 {
+    background: url('../img/test-wedding-featured.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 272px;
+}
+.portfolio-img-2 {
+    background: url('../img/test-wedding-featured-4.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 272px;
+}
+.portfolio-img-3 {
+    background: url('../img/test-wedding-featured-3.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 272px;
+}
+.portfolio-img-4 {
+    background: url('../img/test-wedding-portfolio-7.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 272px;
+}
+.portfolio-img-5 {
+    background: url('../img/test-wedding-portfolio-10.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 272px;
+}
+.portfolio-carousel-slide {
+    position: absolute;
+    width: 100%;
+}
+/* portfolio carousel buttons
+--------------------------- */
+.portfolio-carousel-btn {
+    position: absolute;
+    top: 300px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.carousel-btn-left {
+    left: 5%;
+    z-index: 2; /* place button above images */
+}
+.carousel-btn-right {
+    right: 5%;
+}
+.is-hidden { display: none; }
+/* portfolio carousel indicators
+--------------------------- */
+.portfolio-carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+    padding: 8px 0;
+    gap: 12px;
+}
+.carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background: rgb(0, 0, 0, .3);
+    cursor: pointer;
+}
+.carousel-indicator.current-slide {
+    background: rgb(0, 0, 0, .75);
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* portfolio section
+    --------------------------- */
+    .portfolio-highlights-text-subheading {
+        display: inline-block;
+    }
+    .portfolio-highlights-img {
+        width: 392px;
+    }
+    .portfolio-highlights-text {
+        width: 616px;
+    }
+    .portfolio-carousel-cont {
+        width: revert;
+    }
+}
+@media (min-width: 1024px) {
+    /* portfolio section
+    --------------------------- */
+    .portfolio-highlights-text {
+        width: 712px;
+    }
+}
+
+@media (min-width: 1266px) {
+    /* portfolio carousel
+    --------------------------- */
+    .portfolio-carousel-cont {
+        width: 1124px;
+        height: fit-content;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .carousel-btn-left {
+        left: 25%;
+        z-index: 2; /* place button above images */
+    }
+    .carousel-btn-right {
+        right: 25%;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- contact ------------------------------ */
+/* ----------------------------------------------------------------------- */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 120px auto;
+    padding: 0 32px;
+}
+.contact-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+}
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 320px;
+}
+.contact-text h2 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+.contact-text-main {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.contact-text span {
+    font-weight: 500;
+}
+.instagram-preview-cont {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 320px;
+    height: 320px;
+    overflow-y: auto;
+    /* hide scroll bar start */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* hide scroll bar end */
+}
+.instagram-preview-cont::-webkit-scrollbar { /* hide scroll bar */
+    overflow-x: auto;
+}
+.instagram-preview {
+    width: 152px;
+    height: 152px;
+    border-radius: 8px;
+}
+.preview-1 {
+    background: url('../img/test-wedding-social.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.preview-2 {
+    background: url('../img/test-wedding-social-4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.preview-3 {
+    background: url('../img/test-wedding-social-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.preview-4 {
+    background: url('../img/test-wedding-social-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* footer nav
+--------------------------- */
+.footer-nav-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.footer-nav {
+    display: none;
+    gap: 32px;
+}
+.footer-nav a {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* contact section
+    --------------------------- */
+    .contact {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .contact-cont {
+        align-items: flex-start;
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        /* hide scroll bar start */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        /* hide scroll bar end */
+    }
+    .contact-cont::-webkit-scrollbar { /* hide scroll bar */
+        overflow-x: auto;
+    }
+    .contact-text {
+        width: initial;
+    }
+    /* instagram photos
+    --------------------------- */
+    .instagram-preview-cont {
+        width: initial;
+        height: auto;
+        flex-wrap: nowrap;
+    }
+    /* footer nav
+    --------------------------- */
+    .footer-nav {
+        display: flex;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- about page ---------------------------- */
+/* ----------------------------------------------------------------------- */
+/* about me img
+--------------------------- */
+.about-me-img {
+    display: none; /* remove from html dont like the way it looks */ 
+    background: url('../img/ajamu-myrie-8.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 272px;
+    height: 416px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.about-me-img h1 {
+    font-size: 64px;
+    font-family: "Playfair Display", serif;
+    position: absolute;
+    top: -50px;
+    transform: translateX(50px);
+    color: #E6DFD2;
+}
+
+/* about me intro text
+--------------------------- */
+.about-me-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 128px;
+    margin: 120px auto;
+}
+.about-me-text-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+.about-me-text-heading {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Playfair Display SC", serif;
+}
+.about-me-text-subheading {
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.about-me-text-main {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.about-me-text-secondary {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* about me intro text
+    --------------------------- */
+    .about-me-intro {
+        margin-bottom: 0;
+    }
+    /* about me img
+    --------------------------- */
+    .about-me-img {
+        width: 296px;
+        height: 496px;
+        /* display: flex; */
+        justify-content: center;
+        margin: 0;
+    }
+    .about-me-img h1 {
+        font-size: 80px;
+        top: -64px;
+        transform: initial;
+    }
+    /* about me intro text
+    --------------------------- */
+    .about-me-text-cont {
+        width: 608px;
+        margin: 0;
+        gap: 32px;
+    }
+}
+/* media queries
+--------------------------- */
+@media (min-width: 1024px) {
+    /* about me img
+    --------------------------- */
+    .about-me-img {
+        width: 400px;
+        height: 592px;
+    }
+    /* about me intro text
+    --------------------------- */
+    .about-me-text-cont {
+        width: 816px;
+    }
+    .about-me-text-subheading {
+        font-size: 48px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- forever inspired ------------------------- */
+/* ----------------------------------------------------------------------- */
+.forever-inspired-by {
+    width: 100%;
+    height: 776px;
+    background-color: #D8D5CE;
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    display: none; /* ***NOTE*** remove entirely from the document -- essentially pointless */
+}
+/* forever inspired header
+--------------------------- */
+.forever-inspired-by-header-cont {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    width: 240px;
+    height: 104px;
+    background-color: #dce4f2;
+}
+.forever-inspired-by-header {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+}
+.forever-inspired-by-text-main,
+.forever-inspired-by-text-secondary {
+    display: none;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+/* forever inspired img
+--------------------------- */
+.inspired-cont {
+    display: flex;
+    position: absolute;
+}
+.inspired-img {
+    width: 152px;
+    height: 192px;
+    border: none;
+    border-radius: 8px;
+}
+.inspired-img-1 {
+    background: url('../img/test-bride-groom-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inspired-1 {
+    right: -75px;
+    top: 32px;
+}
+.inspired-text-1 {
+    align-self: flex-end;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.inspired-img-2 {
+    background: url('../img/test-wedding-portfolio-11.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inspired-2 {
+    left: -75px;
+    top: 144px;
+}
+.inspired-text-2 {
+    order: 2;
+    transform: 
+        rotate(90deg) 
+        translateX(50%) 
+        translateY(75%);
+    height: fit-content;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.inspired-img-3 {
+    background: url('../img/test-bride-groom-5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inspired-3 {
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+.inspired-text-3 {
+    order: 2;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.inspired-img-4 {
+    background: url('../img/test-bride-groom-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inspired-4 {
+    left: -25px;
+    bottom: 56px;
+    flex-direction: column;
+}
+.inspired-text-4 {
+    order: 2;
+    align-self: flex-end;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.inspired-img-5 {
+    background: url('../img/test-bride-groom-6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.inspired-5 {
+    right: -45px;
+    bottom: 32px;
+}
+.inspired-text-5 {
+    transform: 
+        rotate(90deg) 
+        translateX(50%) 
+        translateY(-95%);
+    height: fit-content;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* forever inspired header
+    --------------------------- */
+    .forever-inspired-by-header-cont {
+        flex-direction: column;
+        width: 376px;
+        height: initial;
+        padding: 32px;
+        gap: 16px;
+    }
+    .forever-inspired-by-header {
+        width: 276px;
+    }
+    .forever-inspired-by-text-main,
+    .forever-inspired-by-text-secondary {
+        display: inline-block;
+    }
+    /* forever inspired img
+    --------------------------- */
+    .forever-inspired-by-img-cont {
+
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- who am i ----------------------------- */
+/* ----------------------------------------------------------------------- */
+/* about me secondary section
+--------------------------- */
+.about-me-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 80px auto;
+    max-width: 1336px;
+}
+/* about me text intro
+--------------------------- */
+.about-me-secondary-text-intro-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    width: 336px;
+    margin: 0 auto;
+}
+.about-me-secondary-text-intro-cont h2 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+.about-me-divider {
+    width: 120px;
+    border-bottom: 1px solid black;
+}
+.about-me-secondary-text-intro {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+/* about me img
+--------------------------- */
+.about-me-secondary-intro-img-cont {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.about-me-secondary-intro-img {
+    width: 184px;
+    height: 296px;
+    position: absolute;
+    border-radius: 8px;
+}
+.about-me-secondary-img-1 {
+    background: url('../img/ajamu-myrie-7.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.about-me-secondary-img-2 {
+    background: url('../img/ajamu-self.jpeg');
+    background-size: cover;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+}
+/* about me text secondary
+--------------------------- */
+.about-me-secondary-text-main-cont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    width: 328px;
+    margin: 0 auto;
+}
+.abaout-me-secondary-text-main {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.about-me-secondary-text-secondary {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+/* about me text 'quote'
+--------------------------- */
+.about-me-secondary-text-quote {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.about-me-secondary-text-quote-author {
+    font-size: 12px;
+    font-family: "Playfair Display", serif;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* about me secondary section
+    --------------------------- */
+    .about-me-secondary {
+        align-items: center;
+        justify-content: center;
+        height: 776px;
+        gap: 16px;
+        padding: 0 16px;
+    }
+    /* about me text intro
+    --------------------------- */
+    .about-me-secondary-text-intro-cont h2 {
+        text-align: center;
+    }
+    /* about me text 'quote'
+    --------------------------- */
+    .about-me-secondary-text-quote-cont {
+        text-align: center;
+    }
+    /* about me img
+    --------------------------- */
+    .about-me-secondary-intro-img-cont {
+        top: 80px;
+        height: initial;
+    }
+}
+@media (min-width: 1024px) {
+    /* about me secondary section
+    --------------------------- */
+    .about-me-secondary {
+        height: 872px;
+        padding: 0 32px;
+    }
+}
+@media (min-width: 1266px) {
+    /* about me text secondary
+    --------------------------- */
+    .about-me-secondary-text-main-cont {
+        width: 424px;
+    }
+    /* about me img
+    --------------------------- */
+    .about-me-secondary-intro-img {
+        width: 288px;
+        height: 400px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ testimonial ---------------------------- */
+/* ----------------------------------------------------------------------- */
+/* testimonial section
+--------------------------- */
+.testimonial-divider-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 208px;
+    background-color: #DCE4F2;
+}
+.testimonial-text-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 336px;
+    margin: 0 auto;
+}
+.testimonial-quotemark {
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.testimonial-1 {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.testimonial-author {
+    font-size: 12px;
+    font-family: "Playfair Display", serif;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* testimonial section
+    --------------------------- */
+    .testimonial-divider-1 {
+        height: 352px;
+    }
+    .testimonial-text-cont {
+        width: 600px;
+        gap: 16px;
+    }
+    .testimonial-quotemark {
+        font-size: 72px;
+        line-height: 32px;
+    }
+    .testimonial-1 {
+        font-size: 32px;
+    }
+    .testimonial-author {
+        font-size: 16px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ quick facts ---------------------------- */
+/* ----------------------------------------------------------------------- */
+/* quick facts section
+--------------------------- */
+.quick-facts {
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+    max-width: 1528px;
+    margin: 120px auto;
+    gap: 64px;
+}
+
+/* quick facts img
+--------------------------- */
+.quick-facts-img-cont {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    height: 400px;
+}
+.quick-facts-img-cont h2 {
+    position: absolute;
+    bottom: 0;
+    font-size: 48px;
+    font-family: "Playfair Display", serif;
+    width: 144px;
+    z-index: 8; /* index needs to be above the iimages within its container but below the nav and menu */
+}
+.quick-facts-img {
+    width: 184px;
+    height: 296px;
+    position: absolute;
+    border-radius: 8px;
+}
+.quick-facts-img-1 {
+    background: url('../img/ajamu-myrie-5.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.quick-facts-img-2 {
+    background: url('../img/ajamu-myrie-4.jpeg');
+    background-size: cover;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+}
+.quick-facts-img-3 {
+    display: none;
+    background: url('../img/ajamu-myrie-3.jpeg');
+    background-size: cover;
+    background-position: center;
+    left: -200px;
+    top: 0;
+    z-index: 2;
+}
+.quick-facts-img-4 {
+    display: none;
+    background: url('../img/ajamu-myrie-6.jpeg');
+    background-size: cover;
+    background-position: center;
+    left: -400px;
+    bottom: 0;
+}
+/* quick facts 'facts' section
+--------------------------- */
+.quick-facts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.quick-fact {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    border-bottom: 1px solid black;
+    padding: 0 0 24px;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* quick facts section
+    --------------------------- */
+    .quick-facts {
+        flex-direction: row;
+        justify-content: center;
+        width: initial;
+        padding: 32px;
+    }
+    /* quick facts img
+    --------------------------- */
+    .quick-facts-img-cont {
+        width: 50%;
+        height: initial;
+    }
+    .quick-facts-img-cont h2 {
+        bottom: initial;
+        right: -325px;
+        top: -25px;
+        width: initial;
+    }
+    .quick-facts-img {
+        width: 244px;
+        height: 380px;
+    }
+    .quick-facts-img-1 {
+        right: 0;
+        z-index: 4;
+    }
+    .quick-facts-img-2 {
+        right: initial;
+        z-index: 3;
+    }
+    /* quick facts 'facts' section
+    --------------------------- */
+    .quick-facts-list {
+        gap: 16px;
+        width: 336px;
+        margin: 80px 0 0;
+    }
+    .quick-fact {
+        padding: 0 0 16px;
+    }
+}
+@media (min-width: 1024px) {
+    /* quick facts img
+    --------------------------- */
+}
+@media (min-width: 1266px) {
+    /* quick facts section
+    --------------------------- */
+    .quick-facts {
+        justify-content: flex-end;
+        padding-right: 130px;
+    }
+    /* quick facts img
+    --------------------------- */
+    .quick-facts-img-3 {
+        display: flex;
+    }
+}
+@media (min-width: 1367px) {
+    /* quick facts img
+    --------------------------- */
+    .quick-facts-img-4 {
+        display: flex;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- call to action -------------------------- */
+/* ----------------------------------------------------------------------- */
+/* call to action section
+--------------------------- */
+.call-to-action {
+    background-color: #F1EFF4;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* call to action container
+--------------------------- */
+.call-to-action-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 312px;
+    gap: 32px;
+    margin: 0 auto;
+}
+.cta-text-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 312px;
+    gap: 24px;
+}
+/* call to action img
+--------------------------- */
+.call-to-action-img {
+    width: 312px;
+    height: 444px;
+    border-radius: 8px;
+}
+.action-img-1 {
+    background: url('../img/test-wedding-social-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.action-img-2 {
+    background: url('../img/test-wedding-inquire.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+/* call to action text
+--------------------------- */
+.call-to-action h2 {
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+}
+.call-to-action-text-main {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.call-to-action-btn {
+    display: flex;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: "Playfair Display SC", serif;
+    background-color: #DCE4F2;
+    /* box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #DCE4F2; */
+    padding: 24px;
+}
+.call-to-action-btn:hover {
+    cursor: pointer;
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    /* box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #b4bfd4; */
+}
+/* .call-to-action-btn:active {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: none;
+} */
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* call to action section
+    --------------------------- */
+    .call-to-action {
+        height: 848px;
+    }
+    .call-to-action-cont {
+        flex-direction: row;
+        align-items: flex-start;
+        width: fit-content;
+        text-align: left;
+    }
+    .cta-text-cont {
+        align-items: flex-start;
+    }
+}
+@media (min-width: 1024px) {
+    /* call to action section
+    --------------------------- */
+    .call-to-action {
+        position: relative;
+    }
+    /* call to action section
+    --------------------------- */
+    .call-to-action-cont {
+        gap: 48px;
+        text-align: center;
+    }
+    .cta-text-cont {
+        width: 376px;
+        gap: 32px;
+        align-items: center;
+    }
+    /* call to action img
+    --------------------------- */
+    .call-to-action-img {
+        position: absolute;
+        width: 252px;
+        height: 404px;
+    }
+    .action-img-1 {
+        top: 5%;
+        left: 5%;
+    }
+    .action-img-2 {
+        display: flex;
+        bottom: 5%;
+        right: 5%;
+    }
+}
+@media (min-width: 1266px) {
+    /* call to action img
+    --------------------------- */
+    .call-to-action-img {
+        width: 312px;
+        height: 444px;
+    }
+    .action-img-1 {
+        top: 10%;
+        left: 10%;
+    }
+    .action-img-2 {
+        bottom: 10%;
+        right: 10%;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- portfolio page -------------------------- */
+/* ----------------------------------------------------------------------- */
+/* portfolio featured section
+--------------------------- */
+.portfolio-featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin: 120px auto;
+    padding: 0 32px;
+}
+.portfolio-selections-cont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 0 0 10px;
+    border-bottom: 1px solid black;
+    overflow-x: auto;
+    /* hide scroll bar start */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* hide scroll bar end */
+}
+.portfolio-selections-cont::-webkit-scrollbar { /* hide scroll bar */
+    overflow-x: auto;
+}
+.portfolio-selections {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: max-content;
+}
+.portfolio-selection {
+    width: max-content;
+}
+.porfolio-selections-divider {
+    width: 120px;
+    border-bottom: 1px solid black;
+}
+.portfolio-weddings,
+.portfolio-engagements {
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.portfolio-weddings:hover,
+.portfolio-engagements:hover {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #DCE4F2;
+    font-weight: 300;
+}
+.active {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #DCE4F2;
+    font-weight: 300;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* portfolio featured section
+    --------------------------- */
+    .portfolio-selections-cont {
+        width: 100%;
+    }
+    .portfolio-selections {
+        flex-direction: row;
+    }
+    .portfolio-feat-cont {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- testimonial section ----------------------- */
+/* ----------------------------------------------------------------------- */
+/* testimonial section
+--------------------------- */
+.portfolio-testimonial-divider-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 576px;
+    background-color: #DCE4F2;
+}
+.portfolio-testimonial-text-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 336px;
+    margin: 0 auto;
+    gap: 24px;
+}
+.portfolio-testimonial-quotemark {
+    font-size: 56px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    line-height: 0;
+}
+.portfolio-testimonial-1 {
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.portfolio-testimonial-author {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* portfolio testimonial section
+    --------------------------- */
+    .portfolio-testimonial-divider-1 {
+        height: 424px;
+    }
+    .portfolio-testimonial-text-cont {
+        width: 704px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- unique & special ------------------------- */
+/* ----------------------------------------------------------------------- */
+/* unique & special section
+--------------------------- */
+.unique-special {
+    margin: 120px auto;
+}
+.unique-special-text-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin: 24px auto;
+}
+.unique-special-subheading {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.unique-special-text-cont h2 {
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+}
+.unique-special-text-main {
+    display: none;
+    font-size: 18px;
+    width: 348px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+.unique-special-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 72px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+}
+/* portfolio carousel
+--------------------------- */
+.unique-portfolio-carousel-track {
+    position: relative;
+    transition: transform 250ms ease-in;
+}
+.unique-portfolio-carousel-cont {
+    width: 328px;
+    height: 224px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+/* portfolio carousel images
+--------------------------- */
+.unique-portfolio-highlights-carousel-img {
+    width: 100%;
+    border-radius: 8px;
+}
+.unique-portfolio-img-1 {
+    background: url('../img/test-wedding-featured.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 224px;
+}
+.unique-portfolio-img-2 {
+    background: url('../img/test-wedding-featured-4.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 224px;
+}
+.unique-portfolio-img-3 {
+    background: url('../img/test-wedding-featured-3.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 224px;
+}
+.unique-portfolio-img-4 {
+    background: url('../img/test-wedding-portfolio-7.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 224px;
+}
+.unique-portfolio-img-5 {
+    background: url('../img/test-wedding-portfolio-10.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 224px;
+}
+.unique-portfolio-carousel-slide {
+    position: absolute;
+    width: 100%;
+}
+/* portfolio carousel buttons
+--------------------------- */
+.unique-carousel-dots {
+    display: none;
+}
+.unique-portfolio-carousel-btn-cont {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 16px auto;
+    width: 328px;
+}
+.unique-portfolio-carousel-btn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+}
+.unique-carousel-btn-left {
+    left: 15%;
+}
+.unique-carousel-btn-right {
+    right: 15%;
+}
+.is-hidden { display: none; }
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* unigue & special section
+    --------------------------- */
+    .unique-special {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .unique-special-text-cont {
+        margin: 0;
+        text-align: start;
+        align-items: flex-start;
+    }
+    .unique-secial-subheading {
+        font-size: 12px;
+    }
+    .unique-special-text-cont h2 {
+        font-size: 24px;
+    }
+    .unique-special-text-main {
+        display: block;
+        font-size: 16px;
+        width: 296px;
+    }
+    .unique-special-btn {
+        justify-content: flex-start;
+    }
+    /* portfolio carousel buttons
+    --------------------------- */
+    .unique-portfolio-carousel-btn-cont {
+        justify-content: flex-end;
+    }
+    .unique-carousel-btn-left {
+        left: 50%;
+    }
+    .unique-carousel-btn-right {
+        right: 0;
+    }
+}
+@media (min-width: 1366px) {
+    /* unique & special portfolio carousel
+    --------------------------- */
+    .unique-portfolio-carousel-cont {
+        width: 848px;
+    }
+    .unique-portfolio-carousel-slide {
+        width: 350px;
+    }
+    .unique-portfolio-carousel-btn-cont {
+        margin: 16px 0 0 auto;
+    }
+}
+@media (min-width: 1566px) {
+    /* unique & special portfolio carousel
+    --------------------------- */
+    .unique-portfolio-carousel-cont {
+        width: 1352px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ gallery page --------------------------- */
+/* ----------------------------------------------------------------------- */
+/* gallery section
+--------------------------- */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin: 120px auto;
+    padding: 0 32px;
+}
+.gallery-portraits-cont,
+.gallery-weddings-cont,
+.gallery-social-cont {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 224px;
+    gap: 16px;
+}
+.gallery-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.gallery-img {
+    opacity: 0.85;
+}
+.gallery-img:hover {
+    opacity: 1;
+}
+/* gallery componenets
+--------------------------- */
+.hidden-category {
+    display: none;
+}
+/* gallery lightbox
+--------------------------- */
+.lightbox {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.88);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    align-items: center;
+    z-index: 10;
+}
+.lightbox-content {
+    position: relative;
+    width: 85%;
+    margin: 15% auto;
+}
+.lightbox-content img {
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 150px);
+    border: 6px solid #fff;
+    object-fit: cover;
+}
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    top: 45%;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    /* background-color: #fcfbf7; */
+    border-radius: 50%;
+}
+.lightbox-prev {
+    left: 10px;
+}
+.lightbox-next {
+    right: 10px;
+}
+
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* gallery section
+    --------------------------- */
+    .gallery-portraits-cont,
+    .gallery-weddings-cont,
+    .gallery-social-cont {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (min-width: 1024px) {
+    /* gallery section
+    --------------------------- */
+    .gallery-portraits-cont,
+    .gallery-weddings-cont,
+    .gallery-social-cont {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .lightbox-prev,
+    .lightbox-next {
+        width: 56px;
+        height: 56px;
+    }
+}
+@media (min-width: 1644px) {
+    /* gallery section
+    --------------------------- */
+    .gallery-portraits-cont,
+    .gallery-weddings-cont,
+    .gallery-social-cont {
+        grid-auto-rows: 280px;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ contact page --------------------------- */
+/* ----------------------------------------------------------------------- */
+/* contact page
+--------------------------- */
+.contact-page-body { /* class added to the contact page body element */
+    background-color: #d8d5ce;
+}
+/* contact cta section
+--------------------------- */
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 32px;
+    margin: 120px auto;
+}
+/* contact text section
+--------------------------- */
+.contact-cta-text-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-cta-text-cont h1 {
+    font-size: 24px;
+    font-family: "Playfair Display SC", serif;
+    width: max-content;
+    padding-bottom: 16px;
+    border-bottom: 1px solid black;
+}
+.contact-cta-text-main {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    max-width: 552px;
+}
+.contact-cta-text-social {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+.contact-cta-text-secondary {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+/* contact form section
+--------------------------- */
+label {
+    display: none;
+}
+.contact-form {
+    padding: 32px;
+    background-color: #fcfbf7;
+    border-radius: 8px;
+}
+.contact-form-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: none;
+    margin-bottom: 48px;
+}
+.contact-form-legend {
+    font-size: 40px;
+    font-family: "Playfair Display SC", serif;
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+.contact-form-input {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0 8px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    height: 40px;
+}
+.contact-form-textarea {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 131px;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+.contact-form-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    background-color: #DCE4F2;
+    /* box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #DCE4F2; */
+}
+.contact-form-btn:hover {
+    cursor: pointer;
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    /* box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.19), 
+        0 6px 6px rgba(0, 0, 0, 0.23), 
+        inset 0 -3px #b4bfd4; */
+}
+.contact-form-btn:active {
+    color: #fcfbf7;
+    background-color: #b4bfd4;
+    box-shadow: none;
+}
+.contact-form-footer {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    padding-top: 48px;
+    border-top: 1px solid black;
+}
+/* contact form sent page
+--------------------------- */
+.contact-form-sent-cont {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+/* media queries
+--------------------------- */
+@media (min-width: 768px) {
+    /* contact text section
+    --------------------------- */
+    .contact-cta-text-cont {
+        width: 55%;
+    }
+    .contact-cta-text-cont  h1 {
+        width: 100%;
+    }
+    /* contact form section
+    --------------------------- */
+    .contact-form-btn {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    /* contact cta section
+    --------------------------- */
+    .contact-cta {
+        flex-direction: row;
+        margin: 176px auto;
+    }
+    /* contact text section
+    --------------------------- */
+    .contact-cta-text-cont h1 {
+        width: max-content;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------- observer animations ------------------------ */
+/* ----------------------------------------------------------------------- */
+.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1.25s ease-in-out; /* keeping the transition on the hidden class means it will only animate if the hidden class is still there */
+}
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+.slide-left {
+    transform: translateX(5%);
+}
+.slide-right {
+    transform: translateX(-5%);
+}
+.slide-down {
+    transform: translateY(-5%);
+}
+@media (min-width: 768px) {
+    /* featured section img links
+    --------------------------- */
+    .staggered-slide:nth-child(2) {
+        transition-delay: .15s;
+    }
+    .staggered-slide:nth-child(3) {
+        transition-delay: .3s;
+    }
+    .staggered-slide:nth-child(4) {
+        transition-delay: .6s;
+    }
+    .staggered-slide:nth-child(5) {
+        transition-delay: .9s;
+    }
+    .staggered-slide:nth-child(6) {
+        transition-delay: 1.1s;
+    }
+}
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- hero animation -------------------------- */
+/* ----------------------------------------------------------------------- */
+/* keyframes animation
+--------------------------- */
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+/* .hero-img {
+    animation: imageAnimation 50s linear infinite;
+} */
+
+
+
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------- hero animation -------------------------- */
+/* ----------------------------------------------------------------------- */
+.scale-slide { /* scales the images to the left and right of the centered image within the carousel */
+    transform: scale(.75);
+    transition: transform 500ms ease-in-out;
+}
